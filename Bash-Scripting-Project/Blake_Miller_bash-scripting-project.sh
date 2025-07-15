@@ -15,16 +15,58 @@ Display_System_Info(){
     kernal=$(uname -a)
 
     echo "The hostname is $hname"
-    echo "$ip"
+
+    echo ""
+    echo ""
+    echo "Ip info"
+    echo "$ip" 
+    
+    echo ""
+    echo ""
+    echo "Uptime info"
     echo "$up"
+    
+    echo ""
+    echo ""
+    echo "Kernal info"
     echo "$kernal"
+
+}
+
+#function that dipslays users and WILL when added, alert users if
+# a user doe not have a passeword
+
+List_Users(){
+    who=$(who)
+    #local users=(who)
+    echo ""
+    echo ""
+    echo "User info"
+    echo "$who"
+
+
+}
+
+#function that lists disk space WILL when added alert users if disk space
+# reaches a certain threshold
+
+
+Disk_Usage(){
+
+    disk=$(df -h)
+    echo ""
+    echo ""
+    echo "Disk info"
+    echo "$disk"
+
 
 }
 
 
 main(){
     Display_System_Info
-
+    Disk_Usage
+    List_Users
 
 }
 
