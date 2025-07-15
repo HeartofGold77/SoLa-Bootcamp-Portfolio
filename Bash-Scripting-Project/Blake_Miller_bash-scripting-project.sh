@@ -9,15 +9,15 @@
 Display_System_Info(){
 
 
-    hname = $(hostname)
-    ip = $(ip addr)
-    up = $(uptime)
-    kernal = $(uname -a)
+    hname=$(hostname)
+    ip=$(ip addr)
+    up=$(uptime)
+    kernal=$(uname -a)
 
     echo "The hostname is $hname"
-    echo ip
-    echo up
-    echo kernal
+    echo "$ip"
+    echo "$up"
+    echo "$kernal"
 
 }
 
